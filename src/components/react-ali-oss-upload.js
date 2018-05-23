@@ -37,6 +37,10 @@ export default class extends Component {
     this._instance = NxAliOss.getInstance(ossToken);
   }
 
+  componentWillUnmount(){
+    this._instance = null;
+  }
+
   _onChange = inEvent => {
     const { onChange, imgServer, filename } = this.props;
     const files = inEvent.target.files;
