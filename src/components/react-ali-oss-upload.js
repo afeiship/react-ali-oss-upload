@@ -8,6 +8,7 @@ import 'next-guid';
 import NxAliOss from 'next-ali-oss';
 
 const DEFAULT_ACCEPT = 'image/jpg,image/jpeg,image/png,image/gif';
+const SLASH = '/';
 
 export default class extends Component {
   /*===properties start===*/
@@ -46,9 +47,9 @@ export default class extends Component {
     const files = inEvent.target.files;
     const value = nx.map(files, (_, file) => {
       const generate = filename(file);
-      const ext = file.type.split('/')[1];
+      const ext = file.type.split(SLASH)[1];
       const name = `${generate}.${ext}`;
-      const url = imgServer + '/' + name;
+      const url = imgServer + SLASH + name;
       return { file, name, url };
     });
 
