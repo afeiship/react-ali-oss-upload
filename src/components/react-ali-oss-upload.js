@@ -21,6 +21,7 @@ export default class extends Component {
     ossToken: PropTypes.object,
     filename: PropTypes.func,
     imgServer: PropTypes.string,
+    options: PropTypes.object,
   };
 
   static defaultProps = {
@@ -43,14 +44,14 @@ export default class extends Component {
   }
 
   _onChange = inEvent => {
-    const { onChange, imgServer, filename } = this.props;
+    const { options, onChange, imgServer, filename } = this.props;
     const files = inEvent.target.files;
     const value = nx.map(files, (_, file) => {
       const generate = filename(file);
       const ext = file.type.split(SLASH)[1];
       const name = `${generate}.${ext}`;
       const url = imgServer + SLASH + name;
-      return { file, name, url };
+      return { file, name, url, options };
     });
 
     this._instance.uploads(value).then(resp => {
@@ -61,7 +62,7 @@ export default class extends Component {
   };
 
   render() {
-    const { className, filename, imgServer, onChange, ossToken, ...props } = this.props;
+    const { className, options, filename, imgServer, onChange, ossToken, ...props } = this.props;
     return (
       <input type="file" onChange={this._onChange} {...props} />
     );
