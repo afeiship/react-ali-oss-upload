@@ -65,7 +65,11 @@ export default class extends Component {
   render() {
     const { className, options, filename, imgServer, value, onChange, ossToken, ...props } = this.props;
     return (
-      <input type="file" {...props} onChange={this._onChange} />
+      <input
+        className={classNames("react-ali-oss-upload", className)}
+        type="file"
+        onChange={this._onChange}
+        {...props} />
     );
   }
 }
