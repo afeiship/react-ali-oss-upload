@@ -82,7 +82,6 @@
     "npm": ">= 3.0.0"
   },
   "dependencies": {
-    "ali-oss": "^5.2.0",
     "classnames": "^2.2.5",
     "mixin-decorator": "github:afeiship/mixin-decorator",
     "next-ali-oss": "github:afeiship/next-ali-oss",

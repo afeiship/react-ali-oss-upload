@@ -64,7 +64,7 @@ export default class extends Component {
   render() {
     const { className, options, filename, imgServer, onChange, ossToken, ...props } = this.props;
     return (
-      <input type="file" onChange={this._onChange} {...props} />
+      <input type="file" {...props} onChange={this._onChange} />
     );
   }
 }
