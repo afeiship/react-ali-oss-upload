@@ -17,6 +17,7 @@ export default class extends Component {
     name: PropTypes.string,
     multiple: PropTypes.bool,
     onChange: PropTypes.func,
+    value: PropTypes.any,
     accept: PropTypes.string,
     ossToken: PropTypes.object,
     filename: PropTypes.func,
@@ -30,7 +31,7 @@ export default class extends Component {
     onChange: noop,
     accept: DEFAULT_ACCEPT,
     ossToken: null,
-    filename: nx.guid,
+    filename: nx.guid
   };
   /*===properties end===*/
 
@@ -62,7 +63,7 @@ export default class extends Component {
   };
 
   render() {
-    const { className, options, filename, imgServer, onChange, ossToken, ...props } = this.props;
+    const { className, options, filename, imgServer, value, onChange, ossToken, ...props } = this.props;
     return (
       <input type="file" {...props} onChange={this._onChange} />
     );
