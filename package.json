@@ -86,7 +86,6 @@
     "mixin-decorator": "github:afeiship/mixin-decorator",
     "next-ali-oss": "github:afeiship/next-ali-oss",
     "next-dom-event": "github:afeiship/next-dom-event",
-    "next-guid": "github:afeiship/next-guid",
     "noop": "github:afeiship/noop",
     "object-assign": "^4.1.1",
     "prop-types": "^15.5.10",

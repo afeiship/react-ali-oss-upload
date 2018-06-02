@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'noop';
 import objectAssign from 'object-assign';
-import 'next-guid';
 import NxAliOss from 'next-ali-oss';
 
 const DEFAULT_ACCEPT = 'image/jpg,image/jpeg,image/png,image/gif';
@@ -31,7 +30,7 @@ export default class extends Component {
     onChange: noop,
     accept: DEFAULT_ACCEPT,
     ossToken: null,
-    filename: nx.guid
+    filename: nx.returnValue
   };
   /*===properties end===*/
 
