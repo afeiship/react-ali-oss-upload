@@ -30,7 +30,7 @@ export default class extends Component {
     onChange: noop,
     accept: DEFAULT_ACCEPT,
     ossToken: null,
-    filename: nx.returnValue
+    filename: Date.now
   };
   /*===properties end===*/
 
