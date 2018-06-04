@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import noop from 'noop';
 import objectAssign from 'object-assign';
 import NxAliOss from 'next-ali-oss';
+import nx from 'next-js-core2';
 
 const DEFAULT_ACCEPT = 'image/jpg,image/jpeg,image/png,image/gif';
 const SLASH = '/';
